@@ -10,36 +10,6 @@
 </script>
 
 <style lang="scss">
-  .social-net{ /* global button class */
-    position: relative;
-    cursor: pointer;
-    width: 6.5vh;
-    height: 6.5vh;
-    border: none;
-    box-shadow: 0 2px 2px #999;
-    color: #fff!important;
-    font-size: 1.1rem;
-    border-radius: 25px;
-    margin-bottom: 1vh;
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
-  }
-  .facebookBtn{
-    background: #4060A5;
-    &:hover{
-      color: #4060A5!important;
-      background: #fff;
-      border: 1.5px solid #4060A5;
-    }
-  }
-  .googleBtn{
-    background: #e64522;
-    &:hover{
-      color: #e64522!important;
-      background: #fff;
-      border: 1.5px solid #e64522;
-    }
-  }
   .btn.btn-default {
     background-color: #41698E;
     padding: 0.25em 0.4em;

@@ -1,9 +1,9 @@
 <template>
-  <form class="col-md-8 como-funciona-form card">
-    <div class="form-field mx-auto" v-for="pergunta in perguntas" v-show="step == pergunta.step">
-      <p-component classe="fs-title" :texto="pergunta.titulo"></p-component>
-      <p-component classe="fs-subtitle" :texto="pergunta.subtitulo"></p-component>
-      <div class="row mx-auto questoes">
+  <form class="como-funciona-form">
+    <div v-for="pergunta in perguntas" v-show="step == pergunta.step">
+      <p class="fs-title">{{pergunta.titulo}}</p>
+      <p class="fs-subtitle">{{pergunta.subtitulo}}</p>
+      <div class="mx-auto">
         <radio-component ref="radio" v-for="(questao, key) in pergunta.questoes" classediv="perguntas mx-auto" type="radio" :key="pergunta.index" :id="questao.nome"
         :labelradio="questao.nome" :name="pergunta.name" :checked="questao.checked" :label="questao.label" :valor="questao.nome" :peso="questao.peso" v-model="questao.nome" @finished="clicked">
         </radio-component>
@@ -18,7 +18,6 @@
 </template>
 
 <script>
-  import PComponent from '../shared/PComponent.vue'
   import ButtonComponent from '../shared/ButtonComponent.vue'
   import InputComponent from '../shared/InputComponent.vue'
   import RadioComponent from '../shared/RadioComponent.vue'
@@ -26,7 +25,7 @@
   export default {
     name: 'como-funciona-form-component',
     components: {
-      SelectComponent, PComponent, ButtonComponent, InputComponent, RadioComponent
+      SelectComponent, ButtonComponent, InputComponent, RadioComponent
     },
     props: { peso: Number },
     data() {
@@ -145,18 +144,8 @@
 <style lang="scss">
   .como-funciona-form{
     text-align: center;
-    position: relative;
-    margin-bottom: 0;
-    .form-field{
-      padding: 3vh 2vw;
-      padding-bottom: 1vh;
-      height: 100%;
-      width: 50vw;
-      .questoes{
-        height: 18vh;
-        margin-top: 7vh;
-        margin-bottom: 3vh;
-      }
-    }
+    border-radius: 5px;
+    background-color: #ffffff;
+    min-height: 100%;
   }
 </style>

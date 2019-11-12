@@ -1,12 +1,14 @@
 <template>
-  <div class="card px-2 py-3">
-    <p-component classe="fs-title" texto="Resultados"></p-component>
-    <p-component classe="fs-subtitle-2" texto="Essa é a simulação do seu Score"></p-component>
-    <score-card-component @mandaTexto="mandarTexto" ref="scoreCard" v-for="(bar, key) in bars" :key="bar.index" estiloprogress="height: 25vh; width: 12vw;" progressdiv="progress mx-auto"
-    outsidespan="progress-value-md" :estilo="bar.estilo" :bars="bars" :valuenow="bar.valor" insidespan="progress-value" :score="bar.valor">
+  <div class="simulacao-component">
+    <div class="p-4">
+      <p-component classe="fs-title" texto="Resultados"></p-component>
+      <p-component classe="fs-subtitle-2" texto="Essa é a simulação do seu Score"></p-component>
+      <score-card-component @mandaTexto="mandarTexto" ref="scoreCard" v-for="(bar, key) in bars" :key="bar.index" estiloprogress="height: 25vh; width: 25vh;" progressdiv="progress mx-auto"
+      outsidespan="progress-value-md" :estilo="bar.estilo" :bars="bars" :valuenow="bar.valor" insidespan="progress-value" :score="bar.valor">
     </score-card-component>
     <p-component classe="small mb-0" texto="Atenção: o cálculo do Score é apenas um exemplo para que você conheça,
     de forma mais simples e resumida, como cada informação sua influencia o cálculo do seu Score."></p-component>
+    </div>
   </div>
 </template>
 
@@ -40,4 +42,8 @@
 </script>
 
 <style lang="scss">
+  .simulacao-component{
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
 </style>

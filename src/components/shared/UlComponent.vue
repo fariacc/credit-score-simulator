@@ -59,7 +59,6 @@
         height: 2px;
         background-color: #ec9100;
         position: absolute;
-        left: -42%;
         top: 2vh;
         z-index: -1; /*put it behind the numbers*/
       }
@@ -69,7 +68,7 @@
           color: #ffffff;
         }
       }
-      &:first-child:after {
+      &:last-child:after {
         content: none;
       }
     }

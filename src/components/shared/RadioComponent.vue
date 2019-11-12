@@ -27,13 +27,13 @@
 
 <style lang="scss">
   .perguntas{
-    width: 16.5vw;
+    min-width: 80%;
+    max-width: 60%;
     margin-bottom: 1vh;
     height: 5vh;
     input[type=radio] {
       display: none;
       &+label{
-        width: 90%;
         font-size: 0.9rem;
         line-height: 5vh;
         color: #ffffff;

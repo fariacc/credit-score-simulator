@@ -1,7 +1,7 @@
 <template>
   <div class="como-funciona">
     <navbar-interna-component></navbar-interna-component>
-    <div class="col-md-8">
+    <div class="col-md-8 col-lg-8">
       <router-link to="/perfil">
         <button-component tipo="button" rotulo="Meu Perfil" classe="btn text-light btn-opcao"></button-component>
       </router-link>
@@ -12,10 +12,12 @@
     <h2 class="text-light text-center">Como funciona o cálculo de um Score?</h2>
     <hr>
     <ul-component classeul="col-md-12 progressbar" :item="li" :items="li"></ul-component>
-    <div class="col-md-12">
-      <div class="row mx-auto">
-        <como-funciona-form-component ref="form" @show="showModal = true" @salvaScore="salvarScore" @clickNext="next" @clickPrev="prev" @setPeso="setarPeso"></como-funciona-form-component>
-        <div class="col-md-4 pr-0">
+    <div class="col-12">
+      <div class="row mx-0">
+        <div class="col-md-8 col-lg-8 mb-2">
+          <como-funciona-form-component ref="form" @show="showModal = true" @salvaScore="salvarScore" @clickNext="next" @clickPrev="prev" @setPeso="setarPeso"></como-funciona-form-component>
+        </div>
+        <div class="col-md-4 col-lg-4 mb-2">
           <simulacao-component ref="simulacao" :value="this.value" @recebeTextoScore="receberTextoScore"></simulacao-component>
         </div>
       </div>
@@ -145,9 +147,11 @@
 
 <style lang="scss">
   .como-funciona{
-    height: 100vh;
-    width: 100vw;
     background-image: linear-gradient(#213345, #737373);
+    max-width: 100%;
+    max-width: 100vw;
+    min-height: 100vh;
+    max-height: 100%;
     h2{
       font-weight: lighter;
     }

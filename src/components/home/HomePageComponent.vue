@@ -3,7 +3,6 @@
     <div class="conta text-center">
       <img class="brand d-none mx-auto d-md-flex d-lg-flex d-xl-flex py-2" src="../../../src/assets/credit-score-logo.png" alt="Company logo">
       <img class="logo d-sm-flex mx-auto d-md-none d-lg-none d-xl-none py-2" src="../../../src/assets/credit-score-logo.png" alt="Company logo">
-      <!-- <img class="logo d-block mx-auto" src="../../../src/assets/credit-score-logo.png" alt="Company logo"> -->
       <router-link to="/login">
         <button type="button" class="btn btn-outline">
           Acessar

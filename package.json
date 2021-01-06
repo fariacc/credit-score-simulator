@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.6.3",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-preset-stage-3": "^6.24.1",
     "bootstrap": "^4.2.1",
     "bootstrap-material-design": "^4.1.1",
